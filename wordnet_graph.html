@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 
+    Kevin Yang 
+    Cal Poly SLO
+    CSC 400 with Professor Lubomir Stanchev
+    3/14/2017
+
+    wordnet_graph.html
+    HTML for WordNet graph UI.
+-->
+<html>
+  <head>
+    <title>CPE480 Wordnet Representation</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      window.jQuery || 
+      document.write('<script src="js/jquery-3.0.0.min.js"">\x3C/script>\n'
+        + '<script src="js/modernizr.js"">\x3C/script>\n')
+    </script>
+    <script src="js/cytoscape.min.js"></script>
+    <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/wordnet_graph.css">
+  </head>
+  <script>
+  // Wait for window load
+  $(window).on("load", function() {
+    // Animate loader off screen
+    $(".loading").fadeOut("slow");
+    $("#senseForm").fadeIn("slow");
+  });
+  </script>
+  <body>
+    <div class="loading centerText"><p>Loading Graph Data...</p></div>
+    <h1>CPE480 Wordnet Represetation</h1>
+
+    <form id="senseForm" autocomplete="off">
+      Word or Sense:<br>
+      <input type="text" name="origin_word" value="cardiorespiratory"><br>
+      <input id="senseSubmit" type="button" value="Submit">
+      <input id="fitWindow" type="button" value="Fit to Window">
+      <input id="graphReset" type="button" value="Reset">
+    </form>
+    <script>$("#senseForm").hide();</script>
+    <div id="cy"></div>
+    <script src="js/graph_str.js"></script>
+    <script src="js/wordnet_graph.js"></script>
+  </body>
+
+</html>

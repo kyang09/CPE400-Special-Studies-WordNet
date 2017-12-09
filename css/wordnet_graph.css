@@ -1,0 +1,48 @@
+/* 
+    Kevin Yang 
+    Cal Poly SLO
+    CSC 400 with Professor Lubomir Stanchev
+    3/14/2017
+
+    wordnet_graph.css
+    CSS Stylesheet for WordNet graph.
+*/
+
+body {
+    font-family: helvetica;
+    font-size: 14px;
+}
+#senseForm {
+    position: absolute;
+    width:200px;
+    height:30px;
+    right:0;
+    z-index: 99999;
+}
+#cy {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+h1 {
+    opacity: 0.5;
+    font-size: 1em;
+}
+
+.loading {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/Preloader_21.gif) center no-repeat #fff;
+}
+
+.centerText {
+    text-align: center;
+}
